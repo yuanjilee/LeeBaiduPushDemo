@@ -14,6 +14,11 @@
 		185B219C1B20535A000D64EB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185B219B1B20535A000D64EB /* Images.xcassets */; };
 		185B219F1B20535A000D64EB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185B219D1B20535A000D64EB /* LaunchScreen.xib */; };
 		185B21AB1B20535A000D64EB /* LeeBaiduPushDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B21AA1B20535A000D64EB /* LeeBaiduPushDemoTests.m */; };
+		185B21B71B2053E0000D64EB /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 185B21B61B2053E0000D64EB /* libBPush.a */; };
+		185B21B91B2054CA000D64EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185B21B81B2054CA000D64EB /* CoreGraphics.framework */; };
+		185B21BB1B2054D1000D64EB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185B21BA1B2054D1000D64EB /* CoreTelephony.framework */; };
+		185B21BD1B2054D7000D64EB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 185B21BC1B2054D7000D64EB /* libz.dylib */; };
+		185B21BF1B2054DF000D64EB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185B21BE1B2054DF000D64EB /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,12 @@
 		185B21A41B20535A000D64EB /* LeeBaiduPushDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeeBaiduPushDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		185B21A91B20535A000D64EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		185B21AA1B20535A000D64EB /* LeeBaiduPushDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeeBaiduPushDemoTests.m; sourceTree = "<group>"; };
+		185B21B51B2053E0000D64EB /* BPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPush.h; sourceTree = "<group>"; };
+		185B21B61B2053E0000D64EB /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
+		185B21B81B2054CA000D64EB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		185B21BA1B2054D1000D64EB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		185B21BC1B2054D7000D64EB /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		185B21BE1B2054DF000D64EB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +58,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185B21BF1B2054DF000D64EB /* SystemConfiguration.framework in Frameworks */,
+				185B21BD1B2054D7000D64EB /* libz.dylib in Frameworks */,
+				185B21BB1B2054D1000D64EB /* CoreTelephony.framework in Frameworks */,
+				185B21B91B2054CA000D64EB /* CoreGraphics.framework in Frameworks */,
+				185B21B71B2053E0000D64EB /* libBPush.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,9 +79,11 @@
 		185B21821B20535A000D64EB = {
 			isa = PBXGroup;
 			children = (
+				185B21B41B2053E0000D64EB /* LibBPush */,
 				185B218D1B20535A000D64EB /* LeeBaiduPushDemo */,
 				185B21A71B20535A000D64EB /* LeeBaiduPushDemoTests */,
 				185B218C1B20535A000D64EB /* Products */,
+				185B21C01B205690000D64EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +135,26 @@
 				185B21A91B20535A000D64EB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		185B21B41B2053E0000D64EB /* LibBPush */ = {
+			isa = PBXGroup;
+			children = (
+				185B21B51B2053E0000D64EB /* BPush.h */,
+				185B21B61B2053E0000D64EB /* libBPush.a */,
+			);
+			path = LibBPush;
+			sourceTree = "<group>";
+		};
+		185B21C01B205690000D64EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				185B21BE1B2054DF000D64EB /* SystemConfiguration.framework */,
+				185B21BC1B2054D7000D64EB /* libz.dylib */,
+				185B21BA1B2054D1000D64EB /* CoreTelephony.framework */,
+				185B21B81B2054CA000D64EB /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,7 +382,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LeeBaiduPushDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LibBPush",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -354,7 +397,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LeeBaiduPushDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LibBPush",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
